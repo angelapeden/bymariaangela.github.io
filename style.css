@@ -252,10 +252,10 @@ background: #272727;
 {
 	width:100%;
 	/*background:#212121;*/
-	background: #AE171D;
-	display:inline-block;
+	background: #767676;
 	text-align:center;
 	z-index: 1000;
+	overflow: auto;
 }
 
 .top-bar-bg .content_div {
@@ -269,7 +269,7 @@ background: #272727;
 	width:100%;
 	margin:auto	;
 	display:block;
-	background: #303030;
+	background: #ADADAD;
 }
 
 .top-links { float:right;}
@@ -313,7 +313,6 @@ background: #272727;
 	text-align:center;
 	margin:auto;
 	width:100%;
-	display:inline-block	
 }
 
 /*---------Main/Middle Header----------*/
@@ -338,7 +337,7 @@ background: #272727;
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: cover;*/
-	background-color: #272727;
+	background-color: #EBEAEF;
 
 }
 
@@ -357,13 +356,11 @@ background: #272727;
 {
 	
 	margin-bottom:5px;
-	display:inline-block;
-	background: #303030;
 	margin: auto;
 	}
 	
-	.main-thing-menu ul { list-style-type:none; padding:0; margin:auto; text-align: center; display: inline-block;}
-.main-thing-menu ul li { display:inline; float:left; padding-top:15px; padding-bottom:15px; }
+	.main-thing-menu ul { list-style-type:none; padding:0; margin:auto; text-align: center; overflow: auto;}
+.main-thing-menu ul li { display:inline; float:left;}
 .main-thing-menu ul li a:link , .main-thing-menu ul li a:visited{ 
 
 	color:#fff;
@@ -371,6 +368,7 @@ background: #272727;
 	text-decoration:none; font-size:12px;
 	font-family:Arial, Helvetica, sans-serif;
 	text-shadow:0 0 5px #000;
+	display: block;
 
 }
 
@@ -383,6 +381,7 @@ background: #272727;
 	max-width: 980px;
 	margin: auto;
 	text-align: left;
+	overflow: auto;
 	}
 
 /*------*/
@@ -512,7 +511,7 @@ background-repeat:no-repeat;
 {
 	width:100%;
 	
-	background:#212121;
+	background:#424242;
 	margin:auto;
 	min-height:80px;
 	margin-top:20px;
@@ -639,7 +638,8 @@ margin-top: 0px;
 .padd10
 {
 	padding:10px;
-	overflow:hidden	
+	overflow:hidden;
+	text-align: left;
 }
 
 .img_class
@@ -813,6 +813,10 @@ margin-top: 0px;
 	margin-top: 0px; 
 	overflow:hidden
 }
+
+#my_bid_list {
+    text-align: left;
+}	
 
 /*-------------------*/
 
@@ -1252,6 +1256,7 @@ a.green_btn:hover
 	float:left;
 	padding:0;margin:0; padding-top:2px;
 	font-size:13px;
+	clear: both;
 }
 
 
@@ -1339,7 +1344,7 @@ a.green_btn:hover
 {
 	font-size:13px;
 	text-align:center;
-	height: 25px;
+	height: 32px;
 }
 
 .image_holder1 img { padding:2px; border:1px solid #ccc; }
@@ -1578,20 +1583,25 @@ a.green_btn2:hover
 	
 }
 
+/* Media Queries */ 
 
 @media screen and (max-width: 499px) {
-	widget-title {
+	.widget-title {
 	margin-left: .2em;
 	text-align: left;
 	}
 	
-	widget-container {
+	.widget-container {
 	padding: .5em;
 	}
 	
 	.box_post {
 	width: 50%;
 	margin-right: 0px;
+	}
+	
+	.auction-page-image-holder, .auction-page-details-holder {
+	width: 100%;
 	}
 	
 }
@@ -1631,6 +1641,19 @@ a.green_btn2:hover
 	
 	.logo-holder, #suggest {
 	text-align: center;
+	}
+	
+	.auction-page-image-holder {
+	width: 100%;
+	text-align: center;
+	}
+	
+	.auction-page-image-holder .img_class {
+	width: 90%;
+	}
+	
+	.auction-page-details-holder {
+	width: 100%;
 	}
 }
 
