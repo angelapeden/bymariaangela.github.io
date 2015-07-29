@@ -363,11 +363,10 @@ background: #272727;
 .main-thing-menu ul li { display:inline; float:left;}
 .main-thing-menu ul li a:link , .main-thing-menu ul li a:visited{ 
 
-	color:#fff;
+	color:#353334;
 	padding:15px; padding-left:12px; padding-right: 12px;
 	text-decoration:none; font-size:12px;
 	font-family:Arial, Helvetica, sans-serif;
-	text-shadow:0 0 5px #000;
 	display: block;
 
 }
@@ -1168,6 +1167,12 @@ border-radius: 5px;
 	overflow:hidden
 }
 
+.my-current-price-live-content {
+    font-weight: bold;
+    color: #6C6C6C;
+    font-size: 125%;
+}
+
 
 a.green_btn:link, a.green_btn:visited {
 	background:#8CAA33 ; 
@@ -1347,7 +1352,13 @@ a.green_btn:hover
 	height: 32px;
 }
 
-.image_holder1 img { padding:2px; border:1px solid #ccc; }
+.image_holder1 .image_class {
+	border: 0px;
+	padding: 0px;
+	width: 100%;
+}
+
+
 .my-time-live_2 {
 	text-align:center;
 	font-family: Arial;
@@ -1385,7 +1396,8 @@ a.bid_now_v_small:link, a.bid_now_v_small:visited
 	text-decoration: none;
 	padding: 0.4em 2em;
 	font-weight: bold;
-	
+	font-family: 'Oswald';
+	text-transform: uppercase;
 }
 a.bid_now_v_small:hover { opacity:0.8 }
 
@@ -1674,4 +1686,8 @@ a.green_btn2:hover
 	max-width: 100%;
 	margin: auto;
 	}
+	
+	.page-sidebar .xoxo {
+    display: inline-block;
+}
 }
