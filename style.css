@@ -1512,7 +1512,7 @@ a.green_btn2:hover
 .title_holder5
 {
 	float:left;
-	width:560px	;
+	width:75%;
 	
 	/*margin-bottom:10px*/
 	
@@ -1574,7 +1574,8 @@ a.green_btn2:hover
 	padding:0px;
 	border:0px;
 	margin-top:1px;
-	padding-top:1px
+	padding-top:1px;
+	text-align: left;
 	
 }
 
@@ -1582,8 +1583,7 @@ a.green_btn2:hover
 {
 	margin:0px;
 	float:left;
-	width:150px;
-	font-size:12px
+	font-size:12px;
 	
 }
 
@@ -1667,6 +1667,45 @@ a.green_btn2:hover
 	.auction-page-details-holder {
 	width: 100%;
 	}
+}
+
+@media screen and (min-width: 551px) and (max-width: 967px) {
+
+	.auction-page-image-holder {
+    float: left;
+    width: 50%;
+}
+
+	.auction-page-image-holder .img_class {
+    width: 96%;
+}
+
+.auction-page-details-holder {
+    float: right;
+    width: 50%;
+	}
+	
+	.auction-current-price ul li h3 {
+    float: left;
+    margin: 0px;
+    font-size: 150%;
+	width: 50%;
+	max-width: 150px;
+	padding: 0px;
+	}
+	
+	.auction-current-price ul li p {
+    padding: 0px;
+    margin: 0px;
+    color: #79991A;
+    font-weight: bold;
+    font-size: 170%;
+    float: right;
+	width: 50%;
+	max-width: 150px;
+	text-align: right;
+	}
+	
 }
 
 @media screen and (min-width: 711px) and (max-width: 967px) {
