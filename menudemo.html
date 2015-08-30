@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Rajdhani:400,700,600' rel='stylesheet' type='text/css'>
+<style type="text/css">
+body {
+  background: #0A0C14;
+		font-family: 'Rajdhani', sans-serif;
+}
+
+	
+#sort {
+	width: 250px;
+	height: 250px;
+	border-radius: 125px;
+	-moz-border-radius: 125px;
+	-webkit-border-radius: 125px;
+	position: relative;
+	margin: 0px auto;
+	overflow: hidden;
+	padding: 0px;
+	background: #273442;
+	background: -moz-radial-gradient(center, ellipse cover,  #273442 0%, #1c2631 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#273442), color-stop(100%,#1c2631));
+	background: -webkit-radial-gradient(center, ellipse cover,  #273442 0%,#1c2631 100%);
+	background: -o-radial-gradient(center, ellipse cover,  #273442 0%,#1c2631 100%);
+	background: -ms-radial-gradient(center, ellipse cover,  #273442 0%,#1c2631 100%);
+	background: radial-gradient(ellipse at center,  #273442 0%,#1c2631 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#273442', endColorstr='#1c2631',GradientType=1 );
+	border: 2px solid #283646;
+	}
+	.sortlogo {
+		position: absolute;
+		top: 87px;
+		left: 87px;
+		width: 76px;
+		height: 76px;
+		border-radius: 50px;
+		-moz-border-radius: 50px;
+		-webkit-border-radius: 50px;
+		background: #415581;
+		background: -moz-linear-gradient(top,  #465b89 0%, #37456b 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#465b89), color-stop(100%,#37456b));
+		background: -webkit-linear-gradient(top,  #465b89 0%,#37456b 100%);
+		background: -o-linear-gradient(top,  #465b89 0%,#37456b 100%);
+		background: -ms-linear-gradient(top,  #465b89 0%,#37456b 100%);
+		background: linear-gradient(to bottom,  #465b89 0%,#37456b 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#465b89', endColorstr='#37456b',GradientType=0 );
+		z-index: 12;
+		overflow: hidden;
+	}
+	.sortlogo img {
+		width: 76px;
+		height: 76px;
+	}
+	
+	.sortitem {
+		width: 127px;
+		height: 127px;
+		transform-origin: 100% 100%;
+		-moz-transform-origin: 100% 100%;
+		-webkit-transform-origin: 100% 100%;
+		position: absolute;
+		margin: 0;
+		overflow: hidden;
+		border-right: 1px solid #283646;
+		top: -2px;
+		left: -2px;
+	}
+	
+	.sortitem:hover {
+		background: #2d3d4e;
+	}
+
+	
+	
+	.top {
+		transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		}
+		
+	.right {
+		transform: rotate(135deg);
+		-moz-transform: rotate(135deg);
+		-webkit-transform: rotate(135deg);
+		}
+	.bottom {
+		transform: rotate(225deg);
+		-moz-transform: rotate(225deg);
+		-webkit-transform: rotate(225deg);
+	}
+	.left {
+		transform: rotate(315deg);
+		-moz-transform: rotate(315deg);
+		-webkit-transform: rotate(315deg);
+	}
+	.heavy, .smgs, .pistols, .rifles {
+		width: 177px;
+		height: 177px;
+		position: absolute;
+		text-align: center;
+		line-height: 177px;
+		top: -17%;
+		left: -17%;
+	}
+	
+	.heavy a, .smgs a, .pistols a, .rifles a {
+		width: 100%;
+		height: 100%;
+		display: block;
+		text-decoration: none;
+		font-family: 'Rajdhani', sans-serif;
+		font-weight: 600;
+		color: #637f9c;
+	}
+	
+	.heavy {
+		transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+	}
+	
+	.smgs {
+		transform: rotate(-135deg);
+		-moz-transform: rotate(-135deg);
+		-webkit-transform: rotate(-135deg);
+	}
+	
+	.pistols {
+		transform: rotate(-225deg);
+		-moz-transform: rotate(-225deg);
+		-webkit-transform: rotate(-225deg);
+	}
+	
+	.rifles {
+		transform: rotate(-315deg);
+		-moz-transform: rotate(-315deg);
+		-webkit-transform: rotate(-315deg);
+	
+	}
+	
+	
+
+</style>
+
+</head>
+<html>
+<body>
+<div id="sort">
+	<div class="sortlogo">
+		<img src="https://rs795.pbsrc.com/albums/yy232/PixKaruumi/Pokemon%20Pixels/thLapras_avatar_by_regulus_obscuri.gif~c200"/>
+	</div>
+	
+	
+    <div class="top sortitem">
+        <div class="heavy">
+            <a href="#">HEAVY</a>
+        </div>
+    </div>
+	
+    <div class="right sortitem">
+        <div class="smgs">
+            <a href="#">SMGs</a>
+        </div>
+    </div>
+	
+    <div class="bottom sortitem">
+        <div class="pistols">
+            <a href="#">PISTOLS</a>
+        </div>
+    </div>
+	
+    <div class="left sortitem">
+        <div class="rifles">
+            <a href="#">RIFLES</a>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
