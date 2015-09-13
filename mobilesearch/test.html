@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+<title>Test</title>
+
+<style type="text/css">
+body {
+	background: #22d3a7;
+	margin: 0px auto;
+	}
+	
+#contain {
+	margin: 50px auto;
+	width: 80%;
+	position: relative;
+	}
+	
+.one {
+	margin: 0px auto;
+	position: absolute;
+	width: 50%;
+	float: right;
+	}
+
+.two {
+	margin: 0px auto;
+	position: absolute;
+	width: 50%;
+	float: left;
+	left: 40%;
+	}
+
+	
+.template {
+	position: absolute;
+	top: 5%;
+	left: 25%;
+	z-index: 5;
+	}
+
+.gif {
+	z-index: 1;
+	position: absolute;
+	top: 54px;
+	left: 27.5%;
+	width: 279px;
+	height: 492px;
+}
+
+	
+	
+	
+</style>
+</head>
+
+<html>
+<body>
+<div id="contain">
+
+	<div class="one">
+	<img src="phone.png" class="template" />
+		<img src="ver1.gif" class="gif" />
+	</div>
+
+
+	<div class="two">
+	<img src="phone.png" class="template" />
+		<img src="ver2.gif" class="gif" />
+	</div>
+
+</div>
+</body>
+</html>

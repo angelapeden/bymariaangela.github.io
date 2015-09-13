@@ -1,0 +1,607 @@
+
+
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US" >
+	<head>
+
+	<title>
+	My Account &raquo; PennyTheme Demo    </title>
+	<link rel="stylesheet" type="text/css" media="all" href="/style.css" />
+    <link rel="pingback" href="http://onlinedemo.sitemile.com/penny/xmlrpc.php" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.5.3.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<!-- Admin only notice: this page doesn't show a meta description because it doesn't have one, either write it for this page specifically or go into the SEO -> Titles menu and set up a template. -->
+<link rel="canonical" href="http://onlinedemo.sitemile.com/penny/my-account/" />
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel='stylesheet' id='cnss_css-css'  href='http://onlinedemo.sitemile.com/penny/wp-content/plugins/easy-social-icons/css/cnss.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://onlinedemo.sitemile.com/penny/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<script type='text/javascript' src='http://onlinedemo.sitemile.com/penny/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://onlinedemo.sitemile.com/penny/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://onlinedemo.sitemile.com/penny/wp-content/plugins/easy-social-icons/js/cnss.js?ver=1.0'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://onlinedemo.sitemile.com/penny/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://onlinedemo.sitemile.com/penny/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.9.2" />
+<link rel='shortlink' href='http://onlinedemo.sitemile.com/penny/?p=7' />
+  		<script type="text/javascript">
+			
+			var $ = jQuery;
+			
+			var MY_SITE_URL = "http://onlinedemo.sitemile.com/penny";
+			var NO_BIDS = "No Bids";
+		</script>
+
+		<script type="text/javascript" src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/js/jquery.plugin.js"></script>	
+		<script type="text/javascript" src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/js/countdown.js"></script>	
+        <script type="text/javascript" src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/js/smart-updater.js"></script>	
+        <script type="text/javascript" src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/js/jquery.color.js"></script>	
+        <script type="text/javascript" src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/js/penny_scripts.js"></script>	
+         
+        <script type="text/javascript" src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/js/jquery.colorbox.js"></script>
+
+        <link rel="stylesheet" type="text/css" media="all" href="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/css/colorbox.css" />
+      
+			<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style type="text/css" media="screen">.simple-social-icons { overflow: hidden; } .simple-social-icons .alignleft, .simple-social-icons .alignright { margin: 0; padding: 0; } .simple-social-icons ul li { background: none !important; border: none !important; float: left; list-style-type: none !important; margin: 0 5px 10px !important; padding: 0 !important; } .simple-social-icons ul li a, .simple-social-icons ul li a:hover { background: #999999 url(http://onlinedemo.sitemile.com/penny/wp-content/plugins/simple-social-icons/images/sprite_32x32.png) no-repeat; -moz-border-radius: 3px -webkit-border-radius: 3px; border-radius: 3px; display: block; height: 32px; overflow: hidden; text-indent: -999px; width: 32px; }  .simple-social-icons ul li a:hover { background-color: #666666; }</style>	
+
+         <script type="text/javascript" src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/js/my-script.js"></script>
+     <!-- ########################################### -->
+     
+             <script type="text/javascript">
+			 
+			 			 
+			var SITE_URL 			= 'http://onlinedemo.sitemile.com/penny';
+			var is_on_check_list 	= '0';
+			var minus_watchlist 	= "Remove from watchlist";
+			var plus_watchlist 		= "Add to watchlist";
+			var AUCTION_ENDED_THING = "Auction Ended"; 
+	function suggest(inputString){
+	
+		if(inputString.length == 0) {
+			$('#suggestions').fadeOut();
+		} else {  
+		$('#big-search').addClass('load');
+			$.post("http://onlinedemo.sitemile.com/penny/wp-admin/admin-ajax.php?action=autosuggest_it", {queryString: ""+inputString+""}, function(data){
+				
+				var stringa = data.charAt(data.length-1);
+								if(stringa == '0') data = data.slice(0, -1);
+								else data = data.slice(0, -2);
+				
+				
+				if(data.length >0) {
+					$('#suggestions').fadeIn();
+					$('#suggestionsList').html(data);
+					$('#big-search').removeClass('load');
+				}
+			});
+		}
+	}
+
+	function fill(thisValue) {
+		$('#big-search').val(thisValue);
+		setTimeout("$('#suggestions').fadeOut();", 600);
+	}
+	 
+	/*
+	$(function(){
+	  $('#slider2').bxSlider({
+		auto: true,
+		speed: 1000,
+		pause: 5000,
+		autoControls: false,
+		 displaySlideQty: 5,
+    	moveSlideQty: 1
+	  });
+	});	 */
+		
+	</script>
+          
+     <!-- ########################################## -->
+     
+	</head>
+	<body class="page page-id-7 page-parent page-template page-template-penny-special-page-template-php logged-in" >
+    
+    
+  
+        
+		<div id="header">
+			<div class="top-bar-bg">
+			
+					
+			
+			
+            <div class="content_div">
+            
+            <div class="rss_icon_div"><a href="http://onlinedemo.sitemile.com/penny/?feed=rss2&post_type=auction"><img src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/images/rss_icon.png" width="20" height="20" /></a></div>
+            
+            <div class="top-links">
+							
+                            <ul>
+							 <li><a href="http://onlinedemo.sitemile.com/penny/wp-admin">Wp-Admin</a></li> 							
+							<li><a href="http://onlinedemo.sitemile.com/penny" class="">Home</a> </li>
+                            
+                            
+                                                        <li><a class="" href="http://onlinedemo.sitemile.com/penny/watch-list/">Watch List</a> </li>
+                            
+							
+							                            
+                                                        
+                         
+                         
+																
+							<li><a href="http://onlinedemo.sitemile.com/penny/my-account/" 
+                            class="">MyAccount - sitemiledemo</a></li>
+							<li><a href="http://onlinedemo.sitemile.com/penny/wp-login.php?action=logout&amp;_wpnonce=ea80d69ef4">Log Out</a></li>
+									
+									                            
+                            </ul>
+						</div>
+            
+            
+            </div>
+			</div> <!-- end top-bar-bg -->
+		
+			<div class="middle-header-bg">
+				<div class="content_div" id="main_header">
+						<div class="logo-holder">
+												<a href="http://onlinedemo.sitemile.com/penny"><img id="logo" alt="PennyTheme Demo Just another SiteMile Demo Sites site" src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/images/logo.png" /></a>
+						</div>
+                        
+                        
+                        <div id="suggest" >
+                            <form method="get" action="http://onlinedemo.sitemile.com/penny/advanced-search//">
+                                                        <input type="text"  id="big-search" name="term" autocomplete="off" onkeyup="suggest(this.value);" 
+                              value="Begin to search by typing here..." />
+                         
+                            <input type="image" id="srch_icon"  name="search_me" src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/images/srch.png" />
+                            </form>
+                            
+                            <div class="suggestionsBox" id="suggestions" style="z-index:999;display: none;"> 
+                            <img src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/images/arrow.png" style="position: relative; top: -12px; left: 30px;" alt="upArrow" />
+                            <div class="suggestionList" id="suggestionsList"> &nbsp; </div>
+                            </div>
+                    	</div>
+                      
+
+                        
+				</div>
+				
+			</div> <!-- middle-header-bg -->
+			
+			
+		</div>
+        
+                <div class="content_div">
+      	<div class="main-thing-menu main_wrapper_menu">
+                
+        <ul>             <li class="padded_menu"><a href="http://onlinedemo.sitemile.com/penny" class="hm_cls">Home</a></li>
+            <li><a href="http://onlinedemo.sitemile.com/penny/auction-list/">All Auctions</a></li> 
+            <li><a href="http://onlinedemo.sitemile.com/penny/advanced-search/">Advanced Search</a></li> 
+            <li><a href="http://onlinedemo.sitemile.com/penny/show-all-categories/">Show All Categories</a></li> 
+            <li><a href="http://onlinedemo.sitemile.com/penny/closed-auctions/">Closed Auctions</a></li> 
+       
+            
+                                          
+                       
+            </ul>
+        
+        
+        </div> </div>  
+        
+          	
+                
+        
+        
+        <div id="main">
+        <div class="my_box3 breadcrumb-wrap"><div class="padd10"><!-- Breadcrumb NavXT 4.2.0 -->
+<a title="Go to Home." href="http://onlinedemo.sitemile.com" class="mainsite-home">Home</a> &gt; <a title="Go to Home." href="http://onlinedemo.sitemile.com/penny" class="site-home">Home</a> &gt; My Account</div></div>	
+
+
+	
+
+
+<div id="content">
+			<div class="my_box3">
+            	<div class="padd10">
+            
+            	<div class="box_title">My Account Home</div>
+                <div class="box_content">   
+                alkdjf;laskdjf;lasdjf;asldkfja;sdlfj			</div>
+			</div>
+			</div>
+			
+			<div class="clear10"></div>
+			
+			
+			<div class="my_box3">
+            	<div class="padd10">
+            
+            	<div class="box_title">Latest bids</div>
+                <div class="box_content">    
+			
+			
+								<div class="post" id="post-57-250">
+                <input type="hidden" class="my-total-ids-no-delete" value="57_250" />
+                <div class="padd10_bottom">
+                <div class="image_holder">
+                <a href="http://onlinedemo.sitemile.com/penny/auction/samsung-galaxy-tab/"><img width="75" height="65" class="image_class" 
+                src="http://onlinedemo.sitemile.com/penny/files/121102iPadMini_6857809-74x64.jpg" /></a>
+                </div>
+                <div  class="title_holder5" > 
+                     <h2><a href="http://onlinedemo.sitemile.com/penny/auction/samsung-galaxy-tab/" rel="bookmark" title="Permanent Link to Samsung Galaxy Tab">
+                        Samsung Galaxy Tab</a></h2>
+     
+     					<!-- ## end-title ## -->
+                        
+                        <div class="my-bid-live-detail2">
+                        	<div class="my-current-bidder-live">
+                            
+                            <ul class="auction-details1">
+							<li>
+								<img src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/images/price.png" alt="price" width="15" height="15" /> 
+								<h3>Retail Price:</h3>
+								<p>$650.00</p>
+							</li>
+                           
+                           
+                           <li>
+								<img src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/images/posted.png" alt="posted" width="15" height="15" /> 
+								<h3>Highest Bidder:</h3>
+								<p><span id="highest_bidder_57_250"></span></p>
+							</li>
+                            
+                            <li>
+								<img src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/images/clock.png" alt="clock" width="15" height="15" /> 
+								<h3>Timer:</h3>
+								<p>12 seconds</p>
+							</li>
+                           
+                            </ul>
+                            
+                            
+                            </div>                        
+                        </div>
+                        
+                        
+                        
+     					<div class="my-bid-live-detail2">
+                            <div class="my-time-live" id="my-auction-time_57_250">615404</div>
+                            
+                            <div class="bid-btn"><a href="http://onlinedemo.sitemile.com/penny/auction/samsung-galaxy-tab/" class="mm_bid_mmp" rel="57">Bid Now</a></div>
+                            <div class="my-gap-thing"></div>
+                            <div class="my-current-price-live" >
+                            <span class="my-current-price-live-content" id="my-current-price_57_250">$4,178.10</span>
+                            </div>  
+                            
+                            
+            			</div>
+                
+                        
+                        
+                        
+                     </div>
+                     </div></div>
+                     
+                     				<div class="post" id="post-54-363">
+                <input type="hidden" class="my-total-ids-no-delete" value="54_363" />
+                <div class="padd10_bottom">
+                <div class="image_holder">
+                <a href="http://onlinedemo.sitemile.com/penny/auction/apple-ipad-mini/"><img width="75" height="65" class="image_class" 
+                src="http://onlinedemo.sitemile.com/penny/files/P1030033_zpsc263010c-74x64.jpg" /></a>
+                </div>
+                <div  class="title_holder5" > 
+                     <h2><a href="http://onlinedemo.sitemile.com/penny/auction/apple-ipad-mini/" rel="bookmark" title="Permanent Link to Apple IPad Mini">
+                        Apple IPad Mini</a></h2>
+     
+     					<!-- ## end-title ## -->
+                        
+                        <div class="my-bid-live-detail2">
+                        	<div class="my-current-bidder-live">
+                            
+                            <ul class="auction-details1">
+							<li>
+								<img src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/images/price.png" alt="price" width="15" height="15" /> 
+								<h3>Retail Price:</h3>
+								<p>$550.00</p>
+							</li>
+                           
+                           
+                           <li>
+								<img src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/images/posted.png" alt="posted" width="15" height="15" /> 
+								<h3>Highest Bidder:</h3>
+								<p><span id="highest_bidder_54_363"></span></p>
+							</li>
+                            
+                            <li>
+								<img src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/images/clock.png" alt="clock" width="15" height="15" /> 
+								<h3>Timer:</h3>
+								<p>2 seconds</p>
+							</li>
+                           
+                            </ul>
+                            
+                            
+                            </div>                        
+                        </div>
+                        
+                        
+                        
+     					<div class="my-bid-live-detail2">
+                            <div class="my-time-live" id="my-auction-time_54_363">1280264</div>
+                            
+                            <div class="bid-btn"><a href="http://onlinedemo.sitemile.com/penny/auction/apple-ipad-mini/" class="mm_bid_mmp" rel="54">Bid Now</a></div>
+                            <div class="my-gap-thing"></div>
+                            <div class="my-current-price-live" >
+                            <span class="my-current-price-live-content" id="my-current-price_54_363">$40.99</span>
+                            </div>  
+                            
+                            
+            			</div>
+                
+                        
+                        
+                        
+                     </div>
+                     </div></div>
+                     
+                     				<div class="post" id="post-49-13">
+                <input type="hidden" class="my-total-ids-no-delete" value="49_13" />
+                <div class="padd10_bottom">
+                <div class="image_holder">
+                <a href="http://onlinedemo.sitemile.com/penny/auction/samsung-mobile-phone/"><img width="75" height="65" class="image_class" 
+                src="http://onlinedemo.sitemile.com/penny/files/0_480_640_http-__i.haymarket.net_.au_Features_samsung-galaxy-s3-review-hands-on-hand-grip1-74x64.jpg" /></a>
+                </div>
+                <div  class="title_holder5" > 
+                     <h2><a href="http://onlinedemo.sitemile.com/penny/auction/samsung-mobile-phone/" rel="bookmark" title="Permanent Link to Samsung Mobile Phone">
+                        Samsung Mobile Phone</a></h2>
+     
+     					<!-- ## end-title ## -->
+                        
+                        <div class="my-bid-live-detail2">
+                        	<div class="my-current-bidder-live">
+                            
+                            <ul class="auction-details1">
+							<li>
+								<img src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/images/price.png" alt="price" width="15" height="15" /> 
+								<h3>Retail Price:</h3>
+								<p>$650.00</p>
+							</li>
+                           
+                           
+                           <li>
+								<img src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/images/posted.png" alt="posted" width="15" height="15" /> 
+								<h3>Highest Bidder:</h3>
+								<p><span id="highest_bidder_49_13"></span></p>
+							</li>
+                            
+                            <li>
+								<img src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/images/clock.png" alt="clock" width="15" height="15" /> 
+								<h3>Timer:</h3>
+								<p>4 seconds</p>
+							</li>
+                           
+                            </ul>
+                            
+                            
+                            </div>                        
+                        </div>
+                        
+                        
+                        
+     					<div class="my-bid-live-detail2">
+                            <div class="my-time-live" id="my-auction-time_49_13">761864</div>
+                            
+                            <div class="bid-btn"><a href="http://onlinedemo.sitemile.com/penny/auction/samsung-mobile-phone/" class="mm_bid_mmp" rel="49">Bid Now</a></div>
+                            <div class="my-gap-thing"></div>
+                            <div class="my-current-price-live" >
+                            <span class="my-current-price-live-content" id="my-current-price_49_13">$14.00</span>
+                            </div>  
+                            
+                            
+            			</div>
+                
+                        
+                        
+                        
+                     </div>
+                     </div></div>
+                     
+                     				<div class="post" id="post-44-6">
+                <input type="hidden" class="my-total-ids-no-delete" value="44_6" />
+                <div class="padd10_bottom">
+                <div class="image_holder">
+                <a href="http://onlinedemo.sitemile.com/penny/auction/samsung-led-tv/"><img width="75" height="65" class="image_class" 
+                src="http://onlinedemo.sitemile.com/penny/files/Samsung-UN65C8000-65-inch-Full-HD-3D-LED-TV-74x64.jpg" /></a>
+                </div>
+                <div  class="title_holder5" > 
+                     <h2><a href="http://onlinedemo.sitemile.com/penny/auction/samsung-led-tv/" rel="bookmark" title="Permanent Link to Samsung LED TV">
+                        Samsung LED TV</a></h2>
+     
+     					<!-- ## end-title ## -->
+                        
+                        <div class="my-bid-live-detail2">
+                        	<div class="my-current-bidder-live">
+                            
+                            <ul class="auction-details1">
+							<li>
+								<img src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/images/price.png" alt="price" width="15" height="15" /> 
+								<h3>Retail Price:</h3>
+								<p>$900.00</p>
+							</li>
+                           
+                           
+                           <li>
+								<img src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/images/posted.png" alt="posted" width="15" height="15" /> 
+								<h3>Highest Bidder:</h3>
+								<p><span id="highest_bidder_44_6"></span></p>
+							</li>
+                            
+                            <li>
+								<img src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/images/clock.png" alt="clock" width="15" height="15" /> 
+								<h3>Timer:</h3>
+								<p>4 seconds</p>
+							</li>
+                           
+                            </ul>
+                            
+                            
+                            </div>                        
+                        </div>
+                        
+                        
+                        
+     					<div class="my-bid-live-detail2">
+                            <div class="my-time-live" id="my-auction-time_44_6">1107944</div>
+                            
+                            <div class="bid-btn"><a href="http://onlinedemo.sitemile.com/penny/auction/samsung-led-tv/" class="mm_bid_mmp" rel="44">Bid Now</a></div>
+                            <div class="my-gap-thing"></div>
+                            <div class="my-current-price-live" >
+                            <span class="my-current-price-live-content" id="my-current-price_44_6">$1,245.99</span>
+                            </div>  
+                            
+                            
+            			</div>
+                
+                        
+                        
+                        
+                     </div>
+                     </div></div>
+                     
+                     				<div class="post" id="post-38-924">
+                <input type="hidden" class="my-total-ids-no-delete" value="38_924" />
+                <div class="padd10_bottom">
+                <div class="image_holder">
+                <a href="http://onlinedemo.sitemile.com/penny/auction/nikon-d3100-dslr-camera/"><img width="75" height="65" class="image_class" 
+                src="http://onlinedemo.sitemile.com/penny/files/3706187816_482b07e208-74x64.jpg" /></a>
+                </div>
+                <div  class="title_holder5" > 
+                     <h2><a href="http://onlinedemo.sitemile.com/penny/auction/nikon-d3100-dslr-camera/" rel="bookmark" title="Permanent Link to Nikon D3100 DSLR Camera">
+                        Nikon D3100 DSLR Camera</a></h2>
+     
+     					<!-- ## end-title ## -->
+                        
+                        <div class="my-bid-live-detail2">
+                        	<div class="my-current-bidder-live">
+                            
+                            <ul class="auction-details1">
+							<li>
+								<img src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/images/price.png" alt="price" width="15" height="15" /> 
+								<h3>Retail Price:</h3>
+								<p>$</p>
+							</li>
+                           
+                           
+                           <li>
+								<img src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/images/posted.png" alt="posted" width="15" height="15" /> 
+								<h3>Highest Bidder:</h3>
+								<p><span id="highest_bidder_38_924"></span></p>
+							</li>
+                            
+                            <li>
+								<img src="http://onlinedemo.sitemile.com/penny/wp-content/themes/PennyTheme/images/clock.png" alt="clock" width="15" height="15" /> 
+								<h3>Timer:</h3>
+								<p>10 seconds</p>
+							</li>
+                           
+                            </ul>
+                            
+                            
+                            </div>                        
+                        </div>
+                        
+                        
+                        
+     					<div class="my-bid-live-detail2">
+                            <div class="my-time-live" id="my-auction-time_38_924">974084</div>
+                            
+                            <div class="bid-btn"><a href="http://onlinedemo.sitemile.com/penny/auction/nikon-d3100-dslr-camera/" class="mm_bid_mmp" rel="38">Bid Now</a></div>
+                            <div class="my-gap-thing"></div>
+                            <div class="my-current-price-live" >
+                            <span class="my-current-price-live-content" id="my-current-price_38_924">$907.99</span>
+                            </div>  
+                            
+                            
+            			</div>
+                
+                        
+                        
+                        
+                     </div>
+                     </div></div>
+                     
+                     			
+			
+			</div>
+			</div>
+			</div>
+			
+			
+			
+			
+		</div> <!-- end div content -->
+
+
+	
+    	<div id="right-sidebar">
+			<ul class="xoxo">
+			
+			<li class="widget-container widget_text"><h3 class="widget-title">My Account Menu</h3>
+			<p>
+			
+            <ul id="my-account-admin-menu">
+                    <li><a href="http://onlinedemo.sitemile.com/penny/my-account/">MyAccount Home</a></li>
+                    <li><a href="http://onlinedemo.sitemile.com/penny/my-account/payments/">Buy Bids</a></li>
+                    <li><a href="http://onlinedemo.sitemile.com/penny/my-account/personal-information/">Personal Info</a></li>
+                    <li><a href="http://onlinedemo.sitemile.com/penny/my-account/my-bids/">My Bids</a></li>
+                    <li><a href="http://onlinedemo.sitemile.com/penny/my-account/won-items/">My Won Items</a></li>
+                    <li><a href="http://onlinedemo.sitemile.com/penny/my-account/unpaid-items/">My Unpaid Items</a></li>
+                    <li><a href="http://onlinedemo.sitemile.com/penny/my-account/paid-and-not-shipped/">Paid and Not Shipped</a></li>
+                    <li><a href="http://onlinedemo.sitemile.com/penny/my-account/paid-shipped/">Paid & Shipped</a></li>
+            </ul>
+            
+            </p>
+			</li>
+            
+            <!-- ###### -->
+			
+        
+			</ul>
+		</div>
+		
+  
+
+						
+
+
+
+
+</div> 
+</div> <!-- end some_wide_header -->
+</div>
+</div>
+
+<div id="footer">
+	<div id="colophon">	
+	
+		
+	
+		<div id="site-info">
+				<div id="site-info-left">
+					
+					<h3>Copyright (c) PennyTheme Demo</h3>
+					
+				</div>
+				<div id="site-info-right">
+					<a title="Penny Auction Script" href="http://sitemile.com/products/wordpress-penny-auction-theme/">Penny Auction Script</a>				</div>
+			</div>
+		</div>
+
+</div>
+
+
+</div>
+</body>
+</html>
